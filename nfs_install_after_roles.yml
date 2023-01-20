@@ -1,0 +1,6 @@
+---
+- name: nfs service
+  hosts: WebServers
+  become: true
+  roles:
+    - nfsroles

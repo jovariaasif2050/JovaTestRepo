@@ -1,0 +1,6 @@
+---
+  - name: copying files and creating a user
+    hosts: DBServers
+    roles:
+      - copyrole
+      - createuserrole
