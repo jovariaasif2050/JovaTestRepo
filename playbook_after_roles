@@ -1,0 +1,20 @@
+---
+  - name: copying files and creating a user
+    hosts: DBServers
+    roles:
+      - copyrole
+      - createuserrole
+
+---
+- name: nfs service
+  hosts: WebServers
+  become: true
+  roles:
+    - nfsroles
+
+---
+  - name: update packages
+    hosts: TestServers
+    become: true
+    roles
+      - patchserver
